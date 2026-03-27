@@ -6,52 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Tabuleiro do Multiverso - Trailer Oficial</title>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
     <meta property="og:type" content="video.movie">
     <meta property="og:title" content="O Tabuleiro do Multiverso - Assista ao Trailer Oficial">
-    <meta property="og:description"
-        content="Estreia em breve nos cinemas: Maio de 2026. Uma batalha épica pelo código final.">
-    <meta property="og:url" content="https://barrosnio.github.io/trailer/">
+    <meta property="og:description" content="Estreia em breve: Maio de 2026. Uma batalha épica pelo código final.">
+    <meta property="og:url" content="COLOQUE_AQUI_O_LINK_DO_SEU_GITHUB_PAGES">
     <meta property="og:image" content="poster-limpo.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1200">
 
     <style>
-        /* ESTILIZAÇÃO GERAL */
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            /* Evita rolagens estranhas */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: #000; display: flex; justify-content: center;
+            align-items: center; overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff;
         }
 
-        /* O CARTAZ (MISTURA DE GRADE E FLEXBOX) */
+        /* CONTAINER DO CARTAZ */
         .poster-container {
             position: relative;
             width: 90vw;
             height: 90vh;
             max-width: 800px;
-            /* Limita o tamanho em telas grandes */
             display: grid;
-            /* 3. RODAPÉ ORGANIZADO: A última linha tem tamanho garantido (80px) */
             grid-template-rows: auto 1fr auto 80px;
             justify-items: center;
             gap: 15px;
-            /* Espaço entre as seções */
             background-image: url(Gemini_Generated_Image_l0dg4ul0dg4ul0dg.png);
-            /* Nebulosa de fundo */
             background-size: cover;
             background-position: center;
             border: 2px solid #333;
@@ -59,118 +40,46 @@
             padding: 20px;
         }
 
-        /* SEÇÃO DO TÍTULO */
-        .poster-title {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+        .poster-title img { width: 80%; max-width: 500px; height: auto; }
 
-        .poster-title img {
-            width: 80%;
-            max-width: 500px;
-            height: auto;
-        }
-
-        /* SEÇÃO DA MOLDURA E VÍDEO */
+        /* MOLDURA E VÍDEO */
         .frame-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 95%;
-            height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            width: 95%; height: 100%;
             background-image: url('moldura-vazia.png');
-            /* Moldura com meio transparente */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            background-size: contain; background-repeat: no-repeat; background-position: center;
         }
 
         .video-player {
-            width: 78%;
-            /* Ajuste para caber dentro da moldura */
-            height: 40%;
-            /* Ajuste para caber dentro da moldura */
+            width: 78%; 
+            height: 40%; 
             background-color: #000;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        /* SEÇÃO DOS PERSONAGENS (PROTEGIDA) */
+        /* PERSONAGENS */
         .characters-section {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            margin-top: -100px;
-            /* Recuo para os personagens 'saírem' da moldura */
+            width: 100%; display: flex; justify-content: space-around;
+            align-items: flex-end; margin-top: -100px;
         }
+        .characters-section img { height: auto; max-width: 45%; }
+        .capitao-america { margin-left: -50px; }
+        .marcus-img { margin-right: -50px; }
 
-        .characters-section img {
-            height: auto;
-            max-width: 45%;
-        }
-
-        .capitao-america {
-            margin-left: -50px;
-        }
-
-        .marcus-img {
-            margin-right: -50px;
-        }
-
-        /* RODAPÉ ATUALIZADO (FAMÍLIA BARROS) */
+        /* RODAPÉ FAMÍLIA BARROS */
         .poster-footer {
-            grid-row: 4;
-            /* Garante que o rodapé ocupe a 4ª linha da grade */
-            text-align: center;
-            font-size: 0.8rem;
-            color: #ccc;
-            width: 100%;
-            padding-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            line-height: 1.4;
+            grid-row: 4; text-align: center; font-size: 0.8rem; color: #ccc;
+            width: 100%; padding-top: 10px; text-transform: uppercase; letter-spacing: 1px;
         }
-
         .poster-footer span {
-            display: block;
-            margin-top: 8px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 0.95rem;
-            letter-spacing: 1.5px;
+            display: block; margin-top: 8px; color: #fff;
+            font-weight: bold; font-size: 0.95rem;
         }
 
-        /* RESPONSIVIDADE PARA CELULARES */
         @media (max-width: 600px) {
-            .poster-container {
-                width: 98vw;
-                height: 98vh;
-                gap: 5px;
-                padding: 10px;
-                grid-template-rows: auto 1fr auto 100px;
-                /* Mais espaço para o rodapé no celular */
-            }
-
-            .poster-title img {
-                width: 95%;
-            }
-
-            .characters-section {
-                margin-top: -60px;
-            }
-
-            .video-player {
-                width: 75%;
-                height: 38%;
-            }
-
-            .poster-footer {
-                font-size: 0.75rem;
-            }
-
-            .poster-footer span {
-                font-size: 0.85rem;
-            }
+            .poster-container { grid-template-rows: auto 1fr auto 100px; }
+            .characters-section { margin-top: -60px; }
+            .video-player { width: 75%; height: 38%; }
         }
     </style>
 </head>
@@ -179,19 +88,19 @@
 
     <div class="poster-container">
         <div class="poster-title">
-
+            <img src="titulo.png" alt="O Tabuleiro do Multiverso">
         </div>
 
         <div class="frame-section">
-            <video class="video-player" controls poster="poster-limpo.jpg">
-                <source src="https://drive.google.com/file/d/1u1-IJjp2ynH1Gr3Pk_2pBIcKP3MlQD24/view?usp=drive_link" type="video/mp4">
+            <video class="video-player" controls playsinline poster="poster-limpo.jpg">
+                <source src="https://www.dropbox.com/scl/fi/c0ii25kprhyzvjv6pz6xu/0307.mp4?rlkey=tcny53tbuibzhzuh4r716d4je&st=pf12piw1&raw=1" type="video/mp4">
                 Seu navegador não suporta vídeos.
             </video>
         </div>
 
         <div class="characters-section">
-
-
+            <img src="capitao.png" alt="Capitão América" class="capitao-america">
+            <img src="marcus.png" alt="Marcus" class="marcus-img">
         </div>
 
         <div class="poster-footer">
